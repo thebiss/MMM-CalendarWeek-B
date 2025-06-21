@@ -14,6 +14,7 @@ Module.register("MMM-CalendarWeek", {
 	defaults: {
 		maximumEntries: 20, // Total Maximum Entries
 		maximumNumberOfDays: 4,
+		startInDays: 0, // what day to start on; default is 0 for today, 1 tomorrow, etc.		
 		displaySymbol: true,
 		defaultSymbol: "calendar", // Fontawesome Symbol see http://fontawesome.io/cheatsheet/
 		displayRepeatingCountTitle: false,
@@ -136,7 +137,7 @@ Module.register("MMM-CalendarWeek", {
 
 		var upcommingDays = {}
 
-		var day = moment()
+		var day = moment().startOf("day").add(this.config.startInDays, "days")
 		var endOfCalendarWeek = day.clone().add(this.config.maximumNumberOfDays, 'days');
 
 		while (day < endOfCalendarWeek) {
