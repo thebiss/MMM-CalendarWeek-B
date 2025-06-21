@@ -1,3 +1,11 @@
+# Modules: MMM-CalendarWeek-B
+This calendar module  for [Magic Mirror²](https://github.com/MichMich/MagicMirror) builds upon [CalendarWeek by heskja](https://github.com/heskja/MMM-CalendarWeek), supporting the config parameter `startInDays`.  
+
+Sometimes, we only want to show the rest of the week excluding today. 
+To show the weekly calendar starting tomorrow, set the `startInDays` parameter to 1. Increase the value to N, to start N days in the future. 
+
+
+
 # Module: MMM-CalendarWeek
 This calendar module for [Magic Mirror²](https://github.com/MichMich/MagicMirror) is functionally the same as the default calendar app, however its presentation is different as it uses week view.
 This module displays events from a public .ical calendar. It can combine multiple calendars.
